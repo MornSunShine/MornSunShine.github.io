@@ -96,7 +96,7 @@
       });
       e.$watch("search", function (e, n) {
         window.localStorage && window.localStorage.setItem(w, e), t(e)
-      }), window.fetch(window.yiliaConfig.root + "content.json?t=" + new Date, {method: "get"}).then(function (t) {
+      }), window.fetch(window.yiliaConfig.root + "content.json?t=" + +new Date, {method: "get"}).then(function (t) {
         return t.json()
       }).then(function (n) {
         n.forEach(function (t) {

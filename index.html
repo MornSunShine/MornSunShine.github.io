@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/assets/img/avatar.png" class="js-avatar">
+			<img src="/assets/img/devilman.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">MaoMorn</a></h1>
@@ -127,7 +127,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/assets/img/avatar.png" class="js-avatar">
+				<img src="/assets/img/devilman.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">MaoMorn</h1>
@@ -360,6 +360,7 @@
         <p>　　进程是执行中的程序，是分时系统的基本工作单元。</p>
 <p>　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。</p>
 <p>　　协作进程需要一种进程间通信机制（IPC）来允许进程相互交换数据与信息。进程间通信有两种基本模式：（1）<strong>共享内存</strong>；（2）<strong><em>消息传递</em></strong>。在共享内存模式中，建立起一块供协作进程共享的内存区域，进程通过向此共享区域读写数据来交换信息。在消息传递模式中，通过在协作进程间交换消息来实现通信。</p>
+<img class="../assets/blogimg/进程间通信.png">
 <p>　　在操作系统中，这两种模式都很常用。消息传递对于交换较少数量的数据很有用，因为不需要避免冲突。对于计算机间的通信，消息传递也比共享内存更易于实现。然而共享内存允许进程以最快的速度进行方便的通信，在计算机中它可以达到内存的速度。共享内存比消息传递快，消息传递系统通常用系统调用来实现，因此需要更多的内核介入的时间消耗。与此相反，在共享内存系统中，仅在建立共享内存区域时需要系统调用，一旦建立共享内存，所有的访问都被处理为常规的内存访问，不需要来自内核的帮助。<br>  　<br>  　除了以上两种方式，还可以通过一种模式进行进程间通信，剪贴板（Clipboard），剪贴板的实现模式与消息传递有相似的地方，但是数据的量更大。剪贴板（ClipBoard）是内存中的一块区域，是Windows内置的一个非常有用的工具，通过小小的剪贴板，架起了一座彩桥，使得在各种应用程序之间，传递和共享信息成为可能。然而美中不足的是，剪贴板只能保留一份数据，每当新的数据传入，旧的便会被覆盖。</p>
 <p>　　通过MSDN，可以了解C环境下进程间通信需要用到的Functions：</p>
 <p>　　首先，<strong>创建进程</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">CreateProcess</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPCTSTR lpApplicationName,</span></span></span><br><span class="line"><span class="function"><span class="params">_Inout_opt_ LPTSTR pCommandLine,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPSECURITY_ATTRIBUTES lpProcessAttributes,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPSECURITY_ATTRIBUTES lpThreadAttributes,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ BOOL bInheritHandles,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD dwCreationFlags,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPVOID lpEnvironment,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPCTSTR lpCurrentDirectory,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPSTARTUPINFO lpStartupInfo,</span></span></span><br><span class="line"><span class="function"><span class="params">_Out_ LPPROCESS_INFORMATION lpProcessInformation</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>

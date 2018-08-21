@@ -206,26 +206,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-你好" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C-实现进程间通信-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/你好/">你好</a>
+      <a class="article-title" href="/2016/10/C-实现进程间通信-2/">C++实现进程间通信(2)</a>
     </h1>
   
 
         
-        <a href="/2018/06/你好/" class="archive-article-date">
-  	<time datetime="2018-06-17T05:46:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-17</time>
+        <a href="/2016/10/C-实现进程间通信-2/" class="archive-article-date">
+  	<time datetime="2016-10-30T10:40:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <p>　　完成对基础函数功能的熟悉，现在开始布置进程间通信测试程序所需要的控件，在VS下创建Win32空项目（不是Win32控制台项目），向其中添加控件，这个测试程序分为两个子程序，需要用到大概六个功能块，子进程的程序需要用到其中的五个（因为子进程的程序相比父进程少了一个创建进程的功能需要）。每次添加一个可操作控件，VS都会默认分配给这个控件一个特有的ID，并将其在resource.h中进行宏定义，方便在后面的编译中使用。<br>
+        
+          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/#more">more >></a>
         
       
 
@@ -238,7 +241,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/你好/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/">展开全文 >></a>
         </p>
       
 
@@ -268,91 +271,20 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C-实现进程间通信-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/10/C-实现进程间通信-1/">C++实现进程间通信(1)</a>
     </h1>
   
 
         
-        <a href="/2018/06/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post.<br>Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info.<br>If you get any problems when using Hexo,<br>you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/06/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C-实现进程间通信（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/C-实现进程间通信（1）/">C++实现进程间通信（1）</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/C-实现进程间通信（1）/" class="archive-article-date">
-  	<time datetime="2016-10-30T14:00:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
+        <a href="/2016/10/C-实现进程间通信-1/" class="archive-article-date">
+  	<time datetime="2016-10-30T04:00:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
 </a>
         
       </header>
@@ -361,9 +293,9 @@
       
         <p>　　进程是执行中的程序，是分时系统的基本工作单元。</p>
 <p>　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。</p>
-<p>　　协作进程需要一种进程间通信机制（IPC）来允许进程相互交换数据与信息。进程间通信有两种基本模式：（1）<strong>共享内存</strong>；（2）<strong><em>消息传递</em></strong>。在共享内存模式中，建立起一块供协作进程共享的内存区域，进程通过向此共享区域读写数据来交换信息。在消息传递模式中，通过在协作进程间交换消息来实现通信。<br>
+<p>　　协作进程需要一种进程间通信机制（IPC）来允许进程相互交换数据与信息。进程间通信有两种基本模式：（1）<strong>共享内存</strong>；（2）<strong><em>消息传递</em></strong>。在共享内存模式中，建立起一块供协作进程共享的内存区域，进程通过向此共享区域读写数据来交换信息。在消息传递模式中，通过在协作进程间交换消息来实现通信。
         
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信（1）/#more">more >></a>
+          <a class="article-more-a" href="/2016/10/C-实现进程间通信-1/#more">more >></a>
         
       
 
@@ -376,7 +308,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信（1）/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/10/C-实现进程间通信-1/">展开全文 >></a>
         </p>
       
 

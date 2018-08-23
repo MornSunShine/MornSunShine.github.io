@@ -206,6 +206,71 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-AndroidStudio打包APK获取MD5等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/AndroidStudio打包APK获取MD5等/">AndroidStudio打包APK获取MD5等</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/AndroidStudio打包APK获取MD5等/" class="archive-article-date">
+  	<time datetime="2018-08-23T10:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个人还是喜欢用一台闲置的安卓机当作测试机进行Android开发。<br>　　Android软件分为发布版和开发版，在开发阶段，每次的编译，ADT会使用默认的密钥和证书进行签名，如果实际发布，那就需要手动签名，自定密钥了。APK签名有以下用处：<strong>1.程序升级：</strong> 升级应用程序，签名证书要相同，包名称要相同！如果希望用户无缝升级到新的版本，就必须用同一个证书进行签名，只有以同一个证书签名，系统才会允许安装升级的应用程序，如果采用了不同的证书，那么系统会要求APK采用不同的包名称，在这种情况下相当于安装了一个全新的应用程序；<strong>2.程序模块化：</strong> Android系统可以允许同一个证书签名的多个应用程序在一个进程里运行，系统实际把他们作为单个的应用程序，此时就可以把我们的应用程序以模块的方式进行部署，而用户可以独立的升级其中的一个模块；<strong>3.代码或者数据共享：</strong> Android 提供了基于签名的权限机制，通过同一个证书对多个应用程序进行签名，利用基于签名的权限检查，可以在应用程序间以安全的方式共享代码和数据。<br>
+        
+          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK获取MD5等/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK获取MD5等/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-软件测试与质量保证——白盒测试之基本路径覆盖法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -356,67 +421,9 @@
 <li>Failure（失效）：Failure指一个系统或者组件不能完成它被要求的功能，通常在错误的代码段被执行导致不正确的程序输出时出现，显然，Failure由Fault引起；</li>
 <li>Incident（事故）：当Failure出现时，没有警示信息显示，这就是Incident。</li>
 </ul>
-<p>以下通过一个例子进行分析：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> value_2 = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">int</span> value_5 = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">int</span> product = value_2 / value_5;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"2 * 5 = "</span> &lt;&lt; product &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>以上是一个计算2*5的程序代码，输出结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 * 5 = 0</span><br></pre></td></tr></table></figure></p>
-<p>　　显然，与期望值不符，也就是出现了Failure，Failure由Fault导致，寻找程序中不正确的步骤，定位到第6行，这里存在着导致Fault的Error，在程序编写的时候，误将“*”输入为“/”，从而引发了程序的错误。这样我们就发现了系统故障产生的过程，我们往往把我们发现的代码 错误叫做bug。<br>　　从观察到的结果上来看，测试人员知道了程序中一定存在error导致了fault，因为fault导致程序failure产生正确的结果。但是测试人员不知道是什么导致了error。</p>
-<h4 id="什么是“Exception（异常）”？"><a href="#什么是“Exception（异常）”？" class="headerlink" title="什么是“Exception（异常）”？"></a><strong>什么是“Exception（异常）”？</strong></h4><p>　　除了Error导致的这一系列不可预知的程序缺陷，程序中还会存在Exception，但是这类问题往往都是可预测的，无论是C++还是Java等编程语言，都提供了异常处理机制，通过try｛……throw……｝catch｛……｝finally｛……｝这样的语法结构对异常进行处理。</p>
-<h4 id="白盒测试与黑盒测试？"><a href="#白盒测试与黑盒测试？" class="headerlink" title="白盒测试与黑盒测试？"></a><strong>白盒测试与黑盒测试？</strong></h4><p><strong>白盒测试</strong>：测试组件是否符合开发设计；结构测试、内部测试，主要关注程序代码，也就是比较细致的测试。<br><strong>黑盒测试</strong>：测试组件是否符合项目规范；行为测试、扩展测试、输入/输出测试，测试主要关注项目目的，也就是功能的实现，比较笼统。</p>
-<h4 id="测试生命周期"><a href="#测试生命周期" class="headerlink" title="测试生命周期"></a><strong>测试生命周期</strong></h4><p>软件开发声明周期中的测试阶段可以划分为下面几个子阶段：<br>
-<div align="center">
-<img class="diy-img" src="/assets/blogimg/测试划分.png">
-</div>
-</p>
-<p>当然，可以更详细一点，通过活动图来展示测试中个子阶段的执行顺序：<br>
-<div align="center">
-<img class="diy-img" src="/assets/blogimg/测试活动图.png">
-</div>
-</p>
-<h4 id="测试模型"><a href="#测试模型" class="headerlink" title="测试模型"></a>测试模型</h4><h5 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h5><p>　　在对开发生命周期早期发现的漏洞进行维护，其花费显然是比晚发现的漏洞修复来的少。为了减少修改缺陷的花费，就应该尽可能早的发现这个漏洞。<br>　　V模型提出了一种软件开发与软件测试同时进行的软件开发方式。在项目开始的时候，软件开发团队进行软件开发过程，而测试团队则同时进行测试活动的计划工作。这个计划基于开发过程中编写的文档。<br>
-<div align="center">
-<img class="diy-img" src="/assets/blogimg/V模型.png">
-</div>
-</p>
-<p>　　V模型将类似需求、分析、设计、编码的开发阶段放置在“V”的一边，而类似单元、集成、系统，以及验收这样的测试放置在“V”的另一边。<br>下面的表格描述了在开发周期的不同阶段进行的不同测试活动：
-<table border="1">
-<thead>
-<tr>
-<td><strong>开发阶段</strong></td>
-<td><strong>测试活动</strong></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>是否正确实现功能？</strong></td>
-<td><strong>验收测试计划</strong></td>
-</tr>
-<tr>
-<td><strong>概要设计</strong></td>
-<td></td></tr><tr>系统测试计划</tr>tr>集成测试计划
-
-<tr>
-<td><strong>验证首先发生，包括检查文档、代码等</strong></td>
-<td><strong>确认发生在验证之后，主要包括整体产品的检查</strong></td>
-</tr>
-<tr>
-<td><strong>开发者执行</strong></td>
-<td><strong>测试者执行</strong></td>
-</tr>
-<tr>
-<td><strong>静态活动，包括验证软件是否正确的评审、走查、审查</strong></td>
-<td><strong>动态活动，包括按需求执行软件</strong></td>
-</tr>
-<tr>
-<td><strong>这是一个客观的过程，没有主观的决定需要参与软件验证</strong></td>
-<td><strong>这是主观过程，包括关于软件运行的有多好的主观决定</strong></td>
-</tr>
-</tbody>
-</table>
-<br>
-<div align="center">
-<img class="diy-img" src="/assets/blogimg/W模型.png">
-</div>
-</p>
-
+        
+          <a class="article-more-a" href="/2016/11/软件测试与质量保证——测试的一些基础知识/#more">more >></a>
+        
       
 
       
@@ -482,7 +489,8 @@
 <li>软件总是存在缺陷。只有通过测试，才可以发现软件缺陷。也只有发现了缺陷，才可以将软件缺陷从软件产品或软件系统中清理出去；</li>
 <li>软件中存在的缺陷给我们带来的损失是巨大的，这也说明了软件测试的必要性和重要性；</li>
 <li>测试是所有工程学科的基本组成单元，自然也是软件开发的重要组成部分；</li>
-<li>测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；
+<li>测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；</li>
+</ul>
         
           <a class="article-more-a" href="/2016/11/软件测试与质量保证——介绍/#more">more >></a>
         
@@ -823,71 +831,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/11/Tomcat配置文件——前言/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C-实现进程间通信-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/C-实现进程间通信-2/">C++实现进程间通信(2)</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/C-实现进程间通信-2/" class="archive-article-date">
-  	<time datetime="2016-10-30T10:40:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　完成对基础函数功能的熟悉，现在开始布置进程间通信测试程序所需要的控件，在VS下创建Win32空项目（不是Win32控制台项目），向其中添加控件，这个测试程序分为两个子程序，需要用到大概六个功能块，子进程的程序需要用到其中的五个（因为子进程的程序相比父进程少了一个创建进程的功能需要）。每次添加一个可操作控件，VS都会默认分配给这个控件一个特有的ID，并将其在resource.h中进行宏定义，方便在后面的编译中使用。<br>
-        
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/">展开全文 >></a>
         </p>
       
 

@@ -8,15 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>
     
+    AndroidStudio打包APK获取MD5等 |
+    
     MaoMorn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MaoMorn&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="介绍　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AndroidStudio打包APK获取MD5等">
+<meta property="og:url" content="http://yoursite.com/2018/08/AndroidStudio打包APK获取MD5等/index.html">
 <meta property="og:site_name" content="MaoMorn&#39;s Blog">
+<meta property="og:description" content="介绍　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-23T13:49:33.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MaoMorn&#39;s Blog">
+<meta name="twitter:title" content="AndroidStudio打包APK获取MD5等">
+<meta name="twitter:description" content="介绍　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个">
   
   <link rel="alternative" href="/atom.xml" title="MaoMorn&#39;s Blog" type="application/atom+xml">
   
@@ -204,34 +210,52 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-C-实现进程间通信-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-AndroidStudio打包APK获取MD5等" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/C-实现进程间通信-2/">C++实现进程间通信(2)</a>
+    <h1 class="article-title" itemprop="name">
+      AndroidStudio打包APK获取MD5等
     </h1>
   
 
         
-        <a href="/2016/10/C-实现进程间通信-2/" class="archive-article-date">
-  	<time datetime="2016-10-30T10:40:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
+        <a href="/2018/08/AndroidStudio打包APK获取MD5等/" class="archive-article-date">
+  	<time datetime="2018-08-23T10:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　完成对基础函数功能的熟悉，现在开始布置进程间通信测试程序所需要的控件，在VS下创建Win32空项目（不是Win32控制台项目），向其中添加控件，这个测试程序分为两个子程序，需要用到大概六个功能块，子进程的程序需要用到其中的五个（因为子进程的程序相比父进程少了一个创建进程的功能需要）。每次添加一个可操作控件，VS都会默认分配给这个控件一个特有的ID，并将其在resource.h中进行宏定义，方便在后面的编译中使用。<br>
-        
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/#more">more >></a>
-        
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个人还是喜欢用一台闲置的安卓机当作测试机进行Android开发。<br>　　Android软件分为发布版和开发版，在开发阶段，每次的编译，ADT会使用默认的密钥和证书进行签名，如果实际发布，那就需要手动签名，自定密钥了。APK签名有以下用处：<strong>1.程序升级：</strong> 升级应用程序，签名证书要相同，包名称要相同！如果希望用户无缝升级到新的版本，就必须用同一个证书进行签名，只有以同一个证书签名，系统才会允许安装升级的应用程序，如果采用了不同的证书，那么系统会要求APK采用不同的包名称，在这种情况下相当于安装了一个全新的应用程序；<strong>2.程序模块化：</strong> Android系统可以允许同一个证书签名的多个应用程序在一个进程里运行，系统实际把他们作为单个的应用程序，此时就可以把我们的应用程序以模块的方式进行部署，而用户可以独立的升级其中的一个模块；<strong>3.代码或者数据共享：</strong> Android 提供了基于签名的权限机制，通过同一个证书对多个应用程序进行签名，利用基于签名的权限检查，可以在应用程序间以安全的方式共享代码和数据。<br>　　<a id="more"></a>当然，我接触到签名，和这上面说的，都没多大关系，最近在研究一个Smell检测工具，里面的一个required参数就是APK的SHA256签名。因此就有了以下对通过Android Studio对APK进行开发版和发布版的签名流程的学习研究。一般介绍都是先易后难，我觉得，嗯，可以先介绍发布版，再了解开发版，可能会更好。</p>
+<h2 id="发布版签名"><a href="#发布版签名" class="headerlink" title="发布版签名"></a>发布版签名</h2><h3 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h3><p>　　要给APK签名，证书是必不可少的，这里面存放着开发者的相关信息，比如别名，密码等等。证书文件是不可读的，唯一的验证方式就是key的密码匹配。通过Android Studio，我们可以比较容易的创建这样一个证书文件，这是一个jks文件。开发时普遍的apk编译手段，通常都是Shift+F10，或者点击绿色三角Run，这样Android Studio就会自动生成apk文件，检索电脑上可以进行安装的平台设备，虚拟机也好，安卓测试机也好。<br>　　Android Studio的任务栏选取<strong>Build=&gt;Generate Signed APK</strong>，翻译过来就是构建，生成签名的APK，诶，就是这么好记的说。之后会需要在弹出的对话框中填写一系列的信息，包括Key store Path，也就是证书文件可的位置，key store的密码，Key的别名，以及Key的密码，别名和密码只有都和整数里面的对应上了才可以进行签名。当然，我们假设没有证书文件，在这里可以创建一个jks证书文件，”Create new”，将相关信息填写好，比较重要的是Key Store的密码，Key的别名和密码，这些在签名的时候都会用上，其他根据自己喜好填吧，Certificate里的内容没啥大用处，但是在Android Studio里貌似有几项是required的，可以随便填啦，后面用不上的。填写完毕，OK，一个证书文件就创建完毕啦。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -240,16 +264,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-2/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/AndroidStudio打包APK获取MD5等/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/软件测试与质量保证——白盒测试之基本路径覆盖法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">软件测试与质量保证——白盒测试之基本路径覆盖法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -269,142 +352,14 @@
 
 
 
-
-  
-    <article id="post-C-实现进程间通信-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/C-实现进程间通信-1/">C++实现进程间通信(1)</a>
-    </h1>
-  
-
-        
-        <a href="/2016/10/C-实现进程间通信-1/" class="archive-article-date">
-  	<time datetime="2016-10-30T04:00:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>　　进程是执行中的程序，是分时系统的基本工作单元。<br>　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。<br>
-        
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/10/C-实现进程间通信-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-正则表达式的一般书写规则" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/正则表达式的一般书写规则/">正则表达式的一般书写规则</a>
-    </h1>
-  
-
-        
-        <a href="/2016/03/正则表达式的一般书写规则/" class="archive-article-date">
-  	<time datetime="2016-03-23T05:51:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-子字符串"><a href="#1-子字符串" class="headerlink" title="1.子字符串"></a>1.子字符串</h3><p>当搜索一个包含某子串的字符串时，比如，现在要搜索包含”cat”的字符串，那么搜索用的正则表达式就是”cat”。如果搜索对大小写不敏感,单词”catalog”、 “Catherine”、 “sophisticated”都可以匹配。也就是说:<br>
-        
-          <a class="article-more-a" href="/2016/03/正则表达式的一般书写规则/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/03/正则表达式的一般书写规则/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -427,8 +382,8 @@
     <script>
   var yiliaConfig = {
     mathjax: false,
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isArchive: false,
     isTag: false,
     isCategory: false,

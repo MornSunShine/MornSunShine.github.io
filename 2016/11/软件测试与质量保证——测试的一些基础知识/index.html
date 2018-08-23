@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://yoursite.com/assets/blogimg/测试活动图.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogimg/V模型.png">
 <meta property="og:image" content="http://yoursite.com/assets/blogimg/W模型.png">
-<meta property="og:updated_time" content="2018-08-22T12:40:44.041Z">
+<meta property="og:updated_time" content="2018-08-23T09:57:18.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件测试与质量保证——测试的一些基础知识">
 <meta name="twitter:description" content="什么是“缺陷（defect）”？ Error（错误）：Error是指实际值偏离程序最初的期望，往往是由人为造成的，比如在程序编写时的输入失误； Fault（故障）：Fault通常是由于程序中不正确的步骤，过程或者数据定义，导致程序出现了非故意的、不可预料的行为，通常是由一个或多个error导致； Failure（失效）：Failure指一个系统或者组件不能完成它被要求的功能，通常在错误的代码段被执">
@@ -241,7 +241,7 @@
 <li>Failure（失效）：Failure指一个系统或者组件不能完成它被要求的功能，通常在错误的代码段被执行导致不正确的程序输出时出现，显然，Failure由Fault引起；</li>
 <li>Incident（事故）：当Failure出现时，没有警示信息显示，这就是Incident。</li>
 </ul>
-<p>以下通过一个例子进行分析：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> value_2 = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">int</span> value_5 = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">int</span> product = value_2 / value_5;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"2 * 5 = "</span> &lt;&lt; product &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>以下通过一个例子进行分析：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> value_2 = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">int</span> value_5 = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">int</span> product = value_2 / value_5;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"2 * 5 = "</span> &lt;&lt; product &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上是一个计算2*5的程序代码，输出结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 * 5 = 0</span><br></pre></td></tr></table></figure></p>
 <p>　　显然，与期望值不符，也就是出现了Failure，Failure由Fault导致，寻找程序中不正确的步骤，定位到第6行，这里存在着导致Fault的Error，在程序编写的时候，误将“*”输入为“/”，从而引发了程序的错误。这样我们就发现了系统故障产生的过程，我们往往把我们发现的代码 错误叫做bug。<br>　　从观察到的结果上来看，测试人员知道了程序中一定存在error导致了fault，因为fault导致程序failure产生正确的结果。但是测试人员不知道是什么导致了error。</p>
 <h4 id="什么是“Exception（异常）”？"><a href="#什么是“Exception（异常）”？" class="headerlink" title="什么是“Exception（异常）”？"></a><strong>什么是“Exception（异常）”？</strong></h4><p>　　除了Error导致的这一系列不可预知的程序缺陷，程序中还会存在Exception，但是这类问题往往都是可预测的，无论是C++还是Java等编程语言，都提供了异常处理机制，通过try｛……throw……｝catch｛……｝finally｛……｝这样的语法结构对异常进行处理。</p>
@@ -275,31 +275,171 @@
 <td><strong>验收测试计划</strong></td>
 </tr>
 <tr>
-<td><strong>概要设计</strong></td>
-<td></td></tr><tr>系统测试计划</tr>tr>集成测试计划
-
-<tr>
-<td><strong>验证首先发生，包括检查文档、代码等</strong></td>
-<td><strong>确认发生在验证之后，主要包括整体产品的检查</strong></td>
+<td rowspan="2"><strong>概要设计</strong></td>
+<td><strong>系统测试计划</strong></td>
 </tr>
 <tr>
-<td><strong>开发者执行</strong></td>
-<td><strong>测试者执行</strong></td>
+<td><strong>集成测试计划</strong></td>
 </tr>
 <tr>
-<td><strong>静态活动，包括验证软件是否正确的评审、走查、审查</strong></td>
-<td><strong>动态活动，包括按需求执行软件</strong></td>
+<td><strong>详细设计</strong></td>
+<td><strong>单元测试计划</strong></td>
 </tr>
 <tr>
-<td><strong>这是一个客观的过程，没有主观的决定需要参与软件验证</strong></td>
-<td><strong>这是主观过程，包括关于软件运行的有多好的主观决定</strong></td>
+<td><strong>编码</strong></td>
+<td><strong>单元测试</strong></td>
+</tr>
+<tr>
+<td rowspan="2"><strong>集成</strong></td>
+<td><strong>集成测试</strong></td>
+</tr>
+<tr>
+<td><strong>系统测试</strong></td>
+</tr>
+<tr>
+<td><strong>验收</strong></td>
+<td><strong>验收测试</strong></td>
 </tr>
 </tbody>
 </table>
-<br>
+</p>
+<h5 id="V模型缺点"><a href="#V模型缺点" class="headerlink" title="V模型缺点"></a>V模型缺点</h5><p>　　V模型只关注动态测试，并没有充分利用类似审查、检查、静态代码分析这些静态测试技术的优点。</p>
+<h5 id="W模型"><a href="#W模型" class="headerlink" title="W模型"></a>W模型</h5><p>　　W模型是针对V模型的局限性进行解决扩展提出的软件开发模型。它认为静态测试技术适用于软件开发的各个阶段，这就导致测试与软件开发过程并行进行。这些比起动态测试，更低成本，更高效。<br>
 <div align="center">
 <img class="diy-img" src="/assets/blogimg/W模型.png">
 </div>
+<br>　　虽然V模型中测试也是同开发同时开始，但是，那只是计划，并非执行测试过程，W模型将测试与开发真正的放在同意起跑线上，与开发同步进行测试工作。</p>
+<h5 id="测试类型的划分"><a href="#测试类型的划分" class="headerlink" title="测试类型的划分:"></a>测试类型的划分:</h5><p><strong>测试对象</strong><br>
+<table border="1">
+<thead>
+<tr>
+<td><div align="center"><strong>对象（Artifact）</strong></div></td>
+<td><div align="center"><strong>方法（Technique）</strong></div></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>需求（非正式）</strong></td>
+<td><strong>黑盒（Black-Box）</strong></td>
+</tr>
+<tr>
+<td><strong>代码</strong></td>
+<td><strong>白盒（White-Box）</strong></td>
+</tr>
+<tr>
+<td><strong>需求和代码</strong></td>
+<td><strong>黑盒和白盒</strong></td>
+</tr>
+<tr>
+<td><strong>形式化模型：图像化或数字规范</strong></td>
+<td><strong>基于模型的规范（Model-Based Specification）</strong></td>
+</tr>
+<tr>
+<td><strong>组件接口</strong></td>
+<td><strong>接口测试（Interface Testing）</strong></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><strong>发生阶段</strong><br>
+<table border="1">
+<thead>
+<tr>
+<td><div align="center"><strong>阶段（Phase）</strong></div></td>
+<td><div align="center"><strong>方法（Technique）</strong></div></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>编码（Coding）</strong></td>
+<td><strong>单元测试（Unit Testing）</strong></td>
+</tr>
+<tr>
+<td><strong>集成（Integration）</strong></td>
+<td><strong>集成测试（Integration Testing）</strong></td>
+</tr>
+<tr>
+<td><strong>系统集成（System Integration）</strong></td>
+<td><strong>系统测试（System Testing）</strong></td>
+</tr>
+<tr>
+<td><strong>维护（Maintenance）</strong></td>
+<td><strong>回归测试（Regression Testing）</strong></td>
+</tr>
+<tr>
+<td><strong>预发布系统（Post System，Pre-Release）</strong></td>
+<td><strong>Alpha/Beta测试/验收测试（Alpha/Beta-testing/Acceptance testing）</strong></td>
+</tr>
+</tbody>
+</table>
+</p>
+<p><strong>目标导向</strong><br>
+<table border="1">
+<thead>
+<tr>
+<td><div align="center"><strong>目标（Goal）</strong></div></td>
+<td><div align="center"><strong>方法（Technique）</strong></div></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>广告方面（Advertised features ）</strong></td>
+<td><strong>功能性（Functional）</strong></td>
+</tr>
+<tr>
+<td><strong>安全（Security）</strong></td>
+<td><strong>安全（Security）</strong></td>
+</tr>
+<tr>
+<td><strong>无效输入（Invalid inputs）</strong></td>
+<td><strong>鲁棒性（Robustness）</strong></td>
+</tr>
+<tr>
+<td><strong>漏洞（Vulnerabilities）</strong></td>
+<td><strong>漏洞（Vulnerability）</strong></td>
+</tr>
+<tr>
+<td><strong>图形化界面错误（Errors in GUI）</strong></td>
+<td><strong>GUI</strong></td>
+</tr>
+<tr>
+<td><strong>操作的正确性（Operational correctness）</strong></td>
+<td><strong>可操作性（Operational）</strong></td>
+</tr>
+<tr>
+<td><strong>可靠性评估（Reliability assessment）</strong></td>
+<td><strong>可靠性（Reliability）</strong></td>
+</tr>
+<tr>
+<td><strong>操作的正确性（Operational correctness）</strong></td>
+<td><strong>可操作性（Operational）</strong></td>
+</tr>
+<tr>
+<td><strong>抗渗透性（Resistance to penetration）</strong></td>
+<td><strong>渗透性（Penetration）</strong></td>
+</tr>
+<tr>
+<td><strong>系统性能（System performance）</strong></td>
+<td><strong>性能（Performance）</strong></td>
+</tr>
+<tr>
+<td><strong>常规验证（Customer acceptability）</strong></td>
+<td><strong>验证（Acceptance）</strong></td>
+</tr>
+<tr>
+<td><strong>业务兼容性（Business compatibility）</strong></td>
+<td><strong>兼容性（Compatibility）</strong></td>
+</tr>
+<tr>
+<td><strong>外围设备的兼容性（Peripherals compatibility）</strong></td>
+<td><strong>配置（Configuration）</strong></td>
+</tr>
+<tr>
+<td><strong>外语兼容性（Foreign language compatibility）</strong></td>
+<td><strong>外语（Foreign language）</strong></td>
+</tr>
+</tbody>
+</table>
 </p>
 
       

@@ -8,23 +8,24 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>
     
-    C++实现进程间通信（1） |
+    软件测试与质量保证——介绍 |
     
     MaoMorn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="进程是执行中的程序，是分时系统的基本工作单元。 　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。 　　协作进程需要一种进程间通信机制（IPC）来允许进程相">
+  <meta name="description" content="为什么要进行软件测试？ 软件总是存在缺陷。只有通过测试，才可以发现软件缺陷。也只有发现了缺陷，才可以将软件缺陷从软件产品或软件系统中清理出去； 软件中存在的缺陷给我们带来的损失是巨大的，这也说明了软件测试的必要性和重要性； 测试是所有工程学科的基本组成单元，自然也是软件开发的重要组成部分； 测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++实现进程间通信（1）">
-<meta property="og:url" content="http://yoursite.com/2016/10/C-实现进程间通信（1）/index.html">
+<meta property="og:title" content="软件测试与质量保证——介绍">
+<meta property="og:url" content="http://yoursite.com/2016/11/软件测试与质量保证——介绍/index.html">
 <meta property="og:site_name" content="MaoMorn&#39;s Blog">
-<meta property="og:description" content="进程是执行中的程序，是分时系统的基本工作单元。 　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。 　　协作进程需要一种进程间通信机制（IPC）来允许进程相">
+<meta property="og:description" content="为什么要进行软件测试？ 软件总是存在缺陷。只有通过测试，才可以发现软件缺陷。也只有发现了缺陷，才可以将软件缺陷从软件产品或软件系统中清理出去； 软件中存在的缺陷给我们带来的损失是巨大的，这也说明了软件测试的必要性和重要性； 测试是所有工程学科的基本组成单元，自然也是软件开发的重要组成部分； 测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/assets/blogimg/进程间通信.png">
-<meta property="og:updated_time" content="2018-07-08T06:15:12.723Z">
+<meta property="og:image" content="http://yoursite.com/assets/blogimg/Verification_Validation.png">
+<meta property="og:image" content="http://yoursite.com/assets/blogimg/Testing_Debuging.png">
+<meta property="og:updated_time" content="2018-08-22T12:20:30.197Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++实现进程间通信（1）">
-<meta name="twitter:description" content="进程是执行中的程序，是分时系统的基本工作单元。 　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。 　　协作进程需要一种进程间通信机制（IPC）来允许进程相">
-<meta name="twitter:image" content="http://yoursite.com/assets/blogimg/进程间通信.png">
+<meta name="twitter:title" content="软件测试与质量保证——介绍">
+<meta name="twitter:description" content="为什么要进行软件测试？ 软件总是存在缺陷。只有通过测试，才可以发现软件缺陷。也只有发现了缺陷，才可以将软件缺陷从软件产品或软件系统中清理出去； 软件中存在的缺陷给我们带来的损失是巨大的，这也说明了软件测试的必要性和重要性； 测试是所有工程学科的基本组成单元，自然也是软件开发的重要组成部分； 测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；">
+<meta name="twitter:image" content="http://yoursite.com/assets/blogimg/Verification_Validation.png">
   
   <link rel="alternative" href="/atom.xml" title="MaoMorn&#39;s Blog" type="application/atom+xml">
   
@@ -212,57 +213,106 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C-实现进程间通信（1）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-软件测试与质量保证——介绍" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C++实现进程间通信（1）
+      软件测试与质量保证——介绍
     </h1>
   
 
         
-        <a href="/2016/10/C-实现进程间通信（1）/" class="archive-article-date">
-  	<time datetime="2016-10-30T14:00:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-30</time>
+        <a href="/2016/11/软件测试与质量保证——介绍/" class="archive-article-date">
+  	<time datetime="2016-11-25T11:46:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　进程是执行中的程序，是分时系统的基本工作单元。</p>
-<p>　　操作系统内并发执行的进程可以是独立进程或协作进程。如果一个进程不能影响其他进程或被其他进程所影响，那么该进程是独立的。所以，不同其他进程进行数据共享的进程是独立的。相反，如果系统中一个进程能影响其他进程或被其他进程所影响，那么该进程就是协作的，所以，与其他进程共享数据的进程为协作进程。</p>
-<p>　　协作进程需要一种进程间通信机制（IPC）来允许进程相互交换数据与信息。进程间通信有两种基本模式：（1）<strong>共享内存</strong>；（2）<strong><em>消息传递</em></strong>。在共享内存模式中，建立起一块供协作进程共享的内存区域，进程通过向此共享区域读写数据来交换信息。在消息传递模式中，通过在协作进程间交换消息来实现通信。<br><a id="more"></a><br>
+        <h3 id="为什么要进行软件测试？"><a href="#为什么要进行软件测试？" class="headerlink" title="为什么要进行软件测试？"></a>为什么要进行软件测试？</h3><ul>
+<li>软件总是存在缺陷。只有通过测试，才可以发现软件缺陷。也只有发现了缺陷，才可以将软件缺陷从软件产品或软件系统中清理出去；</li>
+<li>软件中存在的缺陷给我们带来的损失是巨大的，这也说明了软件测试的必要性和重要性；</li>
+<li>测试是所有工程学科的基本组成单元，自然也是软件开发的重要组成部分；</li>
+<li>测试人员水平越高，找到软件问题的时间就越早，软件就越容易更正，产品发布之后越稳定，收益越大；<a id="more"></a>
+</li>
+</ul>
+<p><strong>质量</strong>被用来定义软件的优秀等级。为了在软件开发过程中保证质量，需要在软件开发生命周期（SDLC）中的每个环节实现软件质量保证。SQA是一个有计划并且系统地控制改善软件开发过程的方法，这个过程评价软件产品与标准的耦合度。</p>
+<p>质量活动可以被细分为两类：</p>
+<ul>
+<li>预防活动；</li>
+<li>检测活动；</li>
+</ul>
+<p><strong>质量保证（QA）</strong>面向缺陷的预防而非检测，也被用来通过开发和持续优化的过程来实现组织定义的质量策略。质量保证（QA）活动包括：</p>
+<ul>
+<li>质量审计</li>
+<li>过程定义</li>
+<li>工具选择</li>
+<li>训练</li>
+<li>同行评审</li>
+<li>需求跟踪</li>
+<li>质量度量</li>
+</ul>
+<p><strong>质量控制（QC）</strong>是软件产品与指定标准进行比较的过程，并且如果质量不满足标准的需要，相应的行为将被采取。QC是面向缺陷检测的，而非预防。QC活动包括：</p>
+<ul>
+<li>检查</li>
+<li>测试</li>
+<li>核对点检视</li>
+</ul>
+<h4 id="问：什么是测试？"><a href="#问：什么是测试？" class="headerlink" title="问：什么是测试？"></a>问：什么是测试？</h4><p>答：根据ANS/IEEE 1059标准，测试可以被定义为：检测存在与期望情况下的差异（defects、errors、bugs），以及评价软件特点的软件分析过程。测试是无处不在的。</p>
+<h4 id="问：谁进行测试？"><a href="#问：谁进行测试？" class="headerlink" title="问：谁进行测试？"></a>问：谁进行测试？</h4><p>答：软件测试人员，软件开发者。项目管理者。最终用户，不同的身份将会执行名为白盒或是黑盒的测试。</p>
+<h4 id="问：何时开始测试？"><a href="#问：何时开始测试？" class="headerlink" title="问：何时开始测试？"></a>问：何时开始测试？</h4><p>答：越早越好，这样可以尽快发现软件开发中存在的问题，及时进行更正；为了节省测试成本，也可以根据开发模型决定测试开始的时间，比如瀑布模型与增量模型；在SDLC的每个阶段，测试都将以不同的形式被执行。</p>
+<h4 id="问：何时停止测试？"><a href="#问：何时停止测试？" class="headerlink" title="问：何时停止测试？"></a>问：何时停止测试？</h4><p>答：测试是一个永不终止的过程；当然，还有一些影响因素，测试截止日期，测试用例执行完成，功能以及对指定点代码覆盖完成，bug率低于一定等级，没有被定义的高等级bug，管理决定。</p>
+<p><hr><br>以下是软件测试中的几个名词之间的区别：</p>
+<p>验证（Verification）与有效性确认（Validation）的区别
+<table border="1">
+<thead>
+<tr>
+<td><strong>验证（Verification）</strong></td>
+<td><strong>有效性确认（Validation）</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>是否正确实现功能？</strong></td>
+<td><strong>是否实现正确的功能？</strong></td>
+</tr>
+<tr>
+<td><strong>确保软件系统满足所有功能</strong></td>
+<td><strong>确保功能满足需要的行为</strong></td>
+</tr>
+<tr>
+<td><strong>验证首先发生，包括检查文档、代码等</strong></td>
+<td><strong>确认发生在验证之后，主要包括整体产品的检查</strong></td>
+</tr>
+<tr>
+<td><strong>开发者执行</strong></td>
+<td><strong>测试者执行</strong></td>
+</tr>
+<tr>
+<td><strong>静态活动，包括验证软件是否正确的评审、走查、审查</strong></td>
+<td><strong>动态活动，包括按需求执行软件</strong></td>
+</tr>
+<tr>
+<td><strong>这是一个客观的过程，没有主观的决定需要参与软件验证</strong></td>
+<td><strong>这是主观过程，包括关于软件运行的有多好的主观决定</strong></td>
+</tr>
+</tbody>
+</table>
+<br>以下是验证与确认在软件开发过程中参与的阶段：<br>
 <div align="center">
-<img class="diy-img" src="/assets/blogimg/进程间通信.png">
+<img class="diy-img" src="/assets/blogimg/Verification_Validation.png">
 </div>
-<br>　　在操作系统中，这两种模式都很常用。消息传递对于交换较少数量的数据很有用，因为不需要避免冲突。对于计算机间的通信，消息传递也比共享内存更易于实现。然而共享内存允许进程以最快的速度进行方便的通信，在计算机中它可以达到内存的速度。共享内存比消息传递快，消息传递系统通常用系统调用来实现，因此需要更多的内核介入的时间消耗。与此相反，在共享内存系统中，仅在建立共享内存区域时需要系统调用，一旦建立共享内存，所有的访问都被处理为常规的内存访问，不需要来自内核的帮助。<br>  　<br>  　除了以上两种方式，还可以通过一种模式进行进程间通信，剪贴板（Clipboard），剪贴板的实现模式与消息传递有相似的地方，但是数据的量更大。剪贴板（ClipBoard）是内存中的一块区域，是Windows内置的一个非常有用的工具，通过小小的剪贴板，架起了一座彩桥，使得在各种应用程序之间，传递和共享信息成为可能。然而美中不足的是，剪贴板只能保留一份数据，每当新的数据传入，旧的便会被覆盖。</p>
-<p>　　通过MSDN，可以了解C环境下进程间通信需要用到的Functions：</p>
-<p>　　首先，<strong>创建进程</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">CreateProcess</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPCTSTR lpApplicationName,</span></span></span><br><span class="line"><span class="function"><span class="params">_Inout_opt_ LPTSTR pCommandLine,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPSECURITY_ATTRIBUTES lpProcessAttributes,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPSECURITY_ATTRIBUTES lpThreadAttributes,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ BOOL bInheritHandles,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD dwCreationFlags,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPVOID lpEnvironment,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPCTSTR lpCurrentDirectory,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPSTARTUPINFO lpStartupInfo,</span></span></span><br><span class="line"><span class="function"><span class="params">_Out_ LPPROCESS_INFORMATION lpProcessInformation</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>IpApplicationName</em></strong>：这是将被执行的模块的名字，由于16 bit应用不能使用这种方法创建进程，所以一般为NULL。<br><strong><em>lpCommandLine</em></strong>：这是将被执行的命令，可以是被执行问模块的完整路径名，也可以是C:\Windows\System32路径下的应用名，这种情况下可以不带扩展名比如“mspaint.exe”或“mspaint”都可以打开画图应用。<br><strong><em>lpProcessAttributes</em></strong>：指向SECURITY_ATTRIBUTES结构的指针决定返回的新进程对象的句柄是否可以被子进程继承。如果是NULL，句柄不能被继承。<br><strong><em>lpThreadAttributes</em></strong>：指向SECURITY_ATTRIBUTES结构的指针决定返回的新线程对象的句柄是否可以被子线程继承。如果是NULL，句柄不能被继承。<br><strong><em>bInheritHandles</em></strong>：如果参数为TRUE，在调用过程中每个继承处理的句柄能被新进程继承。如果参数是FALSE，句柄不能被继承。请注意，被继承的句柄与原始句柄具有相同的值和访问权限。<br><strong><em>dwCreationFlags</em></strong>：控制优先级和进程创建的标记。<br><strong><em>lpEnvironment</em></strong>：指向新进程环境块的指针。如果为NULL，新进程使用调用进程的环境块。<br><strong><em>lpCurrentDirectory</em></strong>：进程当前目录的完整路径。如果为NULL，新进程将拥有与调用进程相同的当前目录。<br><strong><em>lpStartupInfo</em></strong>：指向一个STARTUPINFO或STARTUPINFOEX结构体的指针。<br><strong><em>lpProcessInformation</em></strong>：指向一个接收新进程定义信息的PROCESS_INFORMATION结构体的指针,PROCESS_INFORMATION结构体的指针。</p>
-<p>　　对于<strong>消息传递</strong>，实现方法最简单，<strong>发送消息</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">LRESULT WINAPI <span class="title">SendMessage</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ HWND hWnd,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ UINT Msg,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ WPARAM wParam,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPARAM lParam</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>hWnd</em></strong>：窗口程序将接收到信息的窗口的句柄。如果这个参数是HWND_BROADCAST ((HWND)0xffff)，消息将被发送给系统中的所有顶层窗口，但不会发送给子窗口。<br><strong><em>Msg</em></strong>：将被发送的消息。消息发送受UIPI支配。进程的线程可以只发送消息到较小或相等的完整性级别的进程中的线程的消息队列。<br><strong><em>wParam</em></strong>：附加信息特定信息，可以作为Msy的补充信息，实现对同一信息的多级响应。<br><strong><em>IParam</em></strong>：附加信息特定信息。一般是传递的信息单位，这是不同于Msg的信息，Msg是发给对方进程的信号，而信息内容是则一般通过IParam传递。  </p>
-<p>　　<strong>接收消息</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">GetMessage</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_Out_ LPMSG lpMsg,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ HWND hWnd,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ UINT wMsgFilterMin,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ UINT wMsgFilterMax</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>lpMsg</em></strong>：指向从线程的消息队列接收消息的MSG结构体的指针。<br><strong><em>hWnd</em></strong>：消息将被检索的窗口的句柄。这个窗口一定要属于当前线程。如果这个参数为NULL，GetMessage将会检索当前线程下的所有窗口以及当前线程下所有hwnd为NULL的消息。因此，如果hWnd是NULL，窗口消息和进程消息都将被处理。如果hWnd为-1，GetMessage只检索当前线程消息队列中hwnd为NULL的消息。<br><strong><em>MsgFilterMin</em></strong>：将检索的最低消息值的整数值。使用WM_KEYFIRST (0x0100)指定第一键盘消息或者WM_MOUSEFIRST (0x0200)第一鼠标消息。在这和wMsgFilterMax中使用WM_INPUT指定只接收WM_INPUT消息。如果wMsgFilterMin和wMsgFilterMax都是0，GetMessage函数返回所有获得的信息（即不执行范围过滤）。<br><strong><em>wMsgFilterMax</em></strong>：将检索的最高消息值的整数值。使用WM_KEYFIRST (0x0100)指定最后键盘消息或者WM_MOUSEFIRST (0x0200)最后鼠标消息。</p>
-<p>下面就是<strong>分享内存</strong>的流程，其实也只有三步：</p>
-<p>　　<strong>创建文件映射</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">HANDLE WINAPI <span class="title">CreateFileMapping</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ HANDLE hFile,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPSECURITY_ATTRIBUTES lpAttributes,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD flProtect,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD dwMaximumSizeHigh,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD dwMaximumSizeLow,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ LPCTSTR lpName</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>hFile</em></strong>：将被创建文件映射的文件句柄。<br><br><strong><em>IpAttributes</em></strong>：指向SECURITY_ATTRIBUTES结构的指针决定返回的句柄是否可以被子进程继承。如果是NULL，句柄不能被继承。<br><strong><em>flProtect</em></strong>：指定文件映射对象的页保护。所有对象被映射的视图必须与此保护兼容。<br><strong><em>dwMaximumSizeHigh</em></strong>：文件映射对象最大尺寸的高阶DWORD。<br><strong><em>dwMaximumSizeLow</em></strong>：文件映射对象的最大尺寸的低阶DWORD。如果这个参数和dwMaximumSizeHigh都是0，文件映射对象的最大尺寸将等于hFile定义的文件的当前尺寸。<br><strong><em>lpName</em></strong>：文件映射对象的名字。该名称可以有一个“Global\”或者“Local\”前缀，在全局或会话命名空间中将显示的打开一个对象。使用终端服务会话实现快速用户切换。第一个用户登录使用会话0，下一个用户登录使用会话1，等等。内核对象名称必须遵循终端服务概述的指导方针，以便应用程序可以支持多个用户。</p>
-<p>　　<strong>打开文件映射</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">HANDLE WINAPI <span class="title">OpenFileMapping</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ DWORD dwDesiredAccess,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ BOOL bInheritHandle,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPCTSTR lpName</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>dwDesiredAccess</em></strong>：文件映射对象的访问口。这个入口会对目标文件映射对象上的安全描述符进行核对。<br><strong><em>bInheritHandle</em></strong>：如果这个参数是TRUE，一个被CreateProcess方法创建的进程可以继承句柄，否则句柄不能被继承。<br><strong><em>lpName</em></strong>：将被打开的文件映射对象的名字。如果有一个此映射对象的开放句柄并且安全描述符与dwDesiredAccess不冲突，则打开操作成功。如果出现命名冲突，函数运行失败，GetlastError方法返回ERROR_INVALID_HANDLE，因为这些对象分享相同的命名空间。该名称可以有一个“Global\”或者“Local\”前缀，在全局或会话命名空间中将显示的打开一个对象。其余的名称可以包含“\”以外的任何字符。在全局命名空间以外除了会话0的会话空间创建一个文件映射对象，要求有SeCreateGlobalPrivilege权限。使用终端服务会话实现快速用户切换。第一个用户登录使用会话0，下一个用户登录使用会话1，等等。内核对象名称必须遵循终端服务概述的指导方针，以便应用程序可以支持多个用户。</p>
-<p>　　<strong>更新文件映射内容到硬盘</strong>（这一步不是文件映射的必要执行内容）：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">FlushViewOfFile</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPCVOID lpBaseAddress,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ SIZE_T dwNumberOfBytesToFlush</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>lpBaseAddress</em></strong>：一个指向被映射文件将被刷新到硬盘表示的字节范围的基本地址。<br><strong><em>dwNumberOfBytesToFlush</em></strong>：将被刷新的字节数。如果为0，文件将被从基本地址刷新到映射的末尾。</p>
-<p>　　<strong>解除对一个文件映射对象的映射</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">UnmapViewOfFile</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ LPCVOID lpBaseAddress</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><em>lpBaseAddress</em>：一个指向被结束映射的文件对象的被映射视图的的基地址的指针。</p>
-<p>再下来就是<strong>剪贴板</strong>操作的基本内容，步骤相对多一点，但是原理很简单，打开，分配缓存区，加入数据到缓存区，缓存区数据到剪贴板，关闭剪贴板，释放缓存区空间（这步所在位置不绝对），获取数据也是类似的操作：</p>
-<p>　　<strong>打开剪贴板</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">BOOL WINAPI <span class="title">OpenClipboard</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ HWND hWndNewOwner</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>hWndNewOwner</em></strong>：将要与打开的剪贴板关联的窗口的句柄。如果这个参数为NULL，打开的剪贴板则与当前任务关联。</p>
-<p>　　<strong>把数据及其格式加入剪贴板</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">HANDLE WINAPI <span class="title">SetClipboardData</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ UINT uFormat,</span></span></span><br><span class="line"><span class="function"><span class="params">_In_opt_ HANDLE hMem</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>uFormat</em></strong>：剪贴板格式。此参数可以是一个注册格式或者任何剪贴板格式。<br><strong><em>hMem</em></strong>：指定格式数据的句柄。这个参数可以为NULL，这表明该窗口在请求时提供指定的剪贴板格式（呈现格式）中的数据。如果一个窗口延迟渲染，它必须处理WM_RENDERFORMAT 和WM_RENDERALLFORMATS消息。</p>
-<p>　　<strong>从剪贴板读取数据</strong>：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">HANDLE WINAPI <span class="title">GetClipboardData</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">_In_ UINT uFormat</span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span>;</span><br></pre></td></tr></table></figure></p>
-<p><strong><em>uFormat</em></strong>：一种剪贴板格式。</p>
-<p>以上就是C/C++环境下进程间通信所将用到的全部核心函数了。</p>
+<br>测试（Testing）与调试（Debugging）的区别</p>
+<p>测试：包括软件中未修正的bug/error/defect的鉴定，测试发生在测试环节。<br>调试：包括识别，隔离和锁定问题或者bug，调试发生在开发阶段，同时实行单元测试或者在锁定被报告的bug的阶段。</p>
+<p>以下是测试与调试在软件开发中出现的时期：<br>
+<div align="center">
+<img class="diy-img" src="/assets/blogimg/Testing_Debuging.png">
+</div>
+<br>测试是质量保证（QA）的子集还是质量控制（QC）的子集？<br>　　早期，对于测试的定义是找出软件中存在的错误，即defect，满足QC的定义。现在，由于敏捷性开发模型的广泛应用，测试更多是全生命的线性过程，这就符合QA。所以，测试的归属，取决于软件开发时所选用的开发模型。</p>
 
       
 
@@ -342,7 +392,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/10/C-实现进程间通信（1）/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/11/软件测试与质量保证——介绍/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -356,18 +406,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/06/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/11/软件测试与质量保证——测试的一些基础知识/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          软件测试与质量保证——测试的一些基础知识
         
       </div>
     </a>
   
   
-    <a href="/2016/03/正则表达式的一般书写规则/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式的一般书写规则</div>
+    <a href="/2016/11/Matlab练习——标准差/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Matlab练习——标准差</div>
       <i class="icon-circle-right"></i>
     </a>
   

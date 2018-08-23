@@ -8,17 +8,21 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>
     
-    Archives: 2016/11 |
+    Tomcat配置文件——Executor |
     
     MaoMorn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MaoMorn&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/11/index.html">
+  <meta name="description" content="介绍　　Executor代表一个能被Tomcat下组件之间共享的线程池。虽然每个connector创建一个一个线程池，但是这个允许在（主要的）connector，还有其他的被配置支持executors的组件之间分享一个线程池。　　这个executor必须实现org.apache.catalina.Executor接口。　　executor可以被嵌套在Service元素下。为了让它能够被connec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tomcat配置文件——Executor">
+<meta property="og:url" content="http://yoursite.com/2016/11/Tomcat配置文件——Executor/index.html">
 <meta property="og:site_name" content="MaoMorn&#39;s Blog">
+<meta property="og:description" content="介绍　　Executor代表一个能被Tomcat下组件之间共享的线程池。虽然每个connector创建一个一个线程池，但是这个允许在（主要的）connector，还有其他的被配置支持executors的组件之间分享一个线程池。　　这个executor必须实现org.apache.catalina.Executor接口。　　executor可以被嵌套在Service元素下。为了让它能够被connec">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-22T06:48:20.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MaoMorn&#39;s Blog">
+<meta name="twitter:title" content="Tomcat配置文件——Executor">
+<meta name="twitter:description" content="介绍　　Executor代表一个能被Tomcat下组件之间共享的线程池。虽然每个connector创建一个一个线程池，但是这个允许在（主要的）connector，还有其他的被配置支持executors的组件之间分享一个线程池。　　这个executor必须实现org.apache.catalina.Executor接口。　　executor可以被嵌套在Service元素下。为了让它能够被connec">
   
   <link rel="alternative" href="/atom.xml" title="MaoMorn&#39;s Blog" type="application/atom+xml">
   
@@ -206,265 +210,233 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Tomcat配置文件——Executor" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/软件测试与质量保证——白盒测试之基本路径覆盖法/" class="archive-article-date">
-  	<time datetime="2016-11-28T11:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/软件测试与质量保证——白盒测试之基本路径覆盖法/">软件测试与质量保证——白盒测试之基本路径覆盖法</a>
+    <h1 class="article-title" itemprop="name">
+      Tomcat配置文件——Executor
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/软件测试与质量保证——白盒测试之逻辑覆盖/" class="archive-article-date">
-  	<time datetime="2016-11-27T11:46:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/软件测试与质量保证——白盒测试之逻辑覆盖/">软件测试与质量保证——白盒测试之逻辑覆盖</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/软件测试与质量保证——测试的一些基础知识/" class="archive-article-date">
-  	<time datetime="2016-11-26T11:46:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/软件测试与质量保证——测试的一些基础知识/">软件测试与质量保证——测试的一些基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/软件测试与质量保证——介绍/" class="archive-article-date">
-  	<time datetime="2016-11-25T11:46:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/软件测试与质量保证——介绍/">软件测试与质量保证——介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/Matlab练习——标准差/" class="archive-article-date">
-  	<time datetime="2016-11-24T00:53:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/Matlab练习——标准差/">Matlab练习——标准差</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/Tomcat配置文件——Executor/" class="archive-article-date">
+        
+        <a href="/2016/11/Tomcat配置文件——Executor/" class="archive-article-date">
   	<time datetime="2016-11-23T00:53:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/Tomcat配置文件——Executor/">Tomcat配置文件——Executor</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>　　<strong>Executor</strong>代表一个能被<strong>Tomcat</strong>下组件之间共享的线程池。虽然每个<strong>connector</strong>创建一个一个线程池，但是这个允许在（主要的）<strong>connector</strong>，还有其他的被配置支持<strong>executors</strong>的组件之间分享一个线程池。<br>　　这个<strong>executor</strong>必须实现<strong>org.apache.catalina.Executor</strong>接口。<br>　　<strong>executor</strong>可以被嵌套在<strong>Service</strong>元素下。为了让它能够被<strong>connectors</strong>发现，<strong>Executor</strong>元素必须在<strong>server.xml</strong>文件中<strong>Connector</strong>元素之前出现。<br><a id="more"></a></p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><h4 id="一般特性"><a href="#一般特性" class="headerlink" title="一般特性"></a>一般特性</h4><p><strong>Executor</strong>的所有实现支持下面的属性：
+<table border="1">
+<thead>
+<tr>
+<td><div align="center"><strong>特性</strong></div></td>
+<td><div align="center"><strong>描述</strong></div></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div align="center">className</div></td>
+<td><div align="left">实现的类名。这个实现必须实现org.apache.catalina.Executor接口。这个接口确保对象能够通过它的那么属性被引用，并且能实现Lifecycle，以至于它能被容器启动或停止。className的默认值是org.apache.catalina.core.StandardThreadExecutor。</div></td>
+</tr>
+<tr>
+<td><div align="center">name</div></td>
+<td><div align="left">这个名字被用来在server.xml文件中的其他地方调用这个线程池。这个属性是必须的，而且必须是唯一的。</div></td>
+</tr>
+</tbody>
+</table>
+</p>
+<h4 id="标准实现"><a href="#标准实现" class="headerlink" title="标准实现"></a>标准实现</h4><p>默认的实现支持下面的属性：
+<table border="1">
+<thead>
+<tr>
+<td><div align="center"><strong>属性</strong></div></td>
+<td><div align="center"><strong>描述</strong></div></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div align="center">threadPriority</div></td>
+<td><div align="left">（int）在executor中的线程的线程优先级，默认是5（常量Thread.NORM_PRIORITY的值）。</div></td>
+</tr>
+<tr>
+<td><div align="center">daemon</div></td>
+<td><div align="left">（boolean）无论这些线程是不是守护线程，默认值都是true。</div></td>
+</tr>
+<tr>
+<td><div align="center">namePrefix</div></td>
+<td><div align="left">（String）每个被executor创建的线程的名字前缀。一个个体线程的名字应该是namePrefix+threadNumber。</div></td>
+</tr>
+<tr>
+<td><div align="center">maxThreads</div></td>
+<td><div align="left">（int）在这个线程池中的活动线程的最大数量，默认是200。</div></td>
+</tr>
+<tr>
+<td><div align="center">minSpareThreads</div></td>
+<td><div align="left">（int）被保持激活状态的最小线程数量，默认是25。</div></td>
+</tr>
+<tr>
+<td><div align="center">maxIdleTime</div></td>
+<td><div align="left">（int）空闲线程关闭前的毫秒数，除非活动线程的数量少于等于minSpareThreads。默认值是60000（一分钟）。</div></td>
+</tr>
+<tr>
+<td><div align="center">maxQueueSize</div></td>
+<td><div align="left">（int）在被拒绝前排队等候运行的可运行任务的最大数量。默认值是Integer.MAX_VALUE。</div></td>
+</tr>
+<tr>
+<td><div align="center">prestartminSpareThreads</div></td>
+<td><div align="left">（boolen）当启动Executor的时候，无论minSpareThreads是不是被开启，默认值都是false。</div></td>
+</tr>
+<tr>
+<td><div align="center">threadRenewalDelay</div></td>
+<td><div align="left">（long）如果ThreadLocalLeakPreventionListener被配置，它将通知这个executor有关被停止contexts的信息。当一个context被停止后，线程池中的线程被更新。为了避免在同一时刻更新所有的线程，这个参数设置在任意两个线程更新前的延迟。这个值是毫秒级的。默认值是1000毫秒。如果这个值是负的，线程不会被更新。</div></td>
+</tr>
+</tbody>
+</table>
+</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/11/Tomcat配置文件——Executor/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/Tomcat配置文件——Service/" class="archive-article-date">
-  	<time datetime="2016-11-22T00:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2016/11/Matlab练习——标准差/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Matlab练习——标准差
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/Tomcat配置文件——Service/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Tomcat配置文件——Service</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/Tomcat配置文件——Service/">Tomcat配置文件——Service</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/Tomcat配置文件——Server/" class="archive-article-date">
-  	<time datetime="2016-11-21T12:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/Tomcat配置文件——Server/">Tomcat配置文件——Server</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/Tomcat配置文件——前言/" class="archive-article-date">
-  	<time datetime="2016-11-20T12:33:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/Tomcat配置文件——前言/">Tomcat配置文件——前言</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -487,8 +459,8 @@
   var yiliaConfig = {
     mathjax: false,
     isHome: false,
-    isPost: false,
-    isArchive: true,
+    isPost: true,
+    isArchive: false,
     isTag: false,
     isCategory: false,
     open_in_new: true,

@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="MaoMorn&#39;s Blog">
 <meta property="og:description" content="Tomcat的配置文件的格式为无模式的XML格式；元素和属性都是大小写敏感的。支持Apache Ant风格的变量替换；一个带有 propname 的系统属性会被以 ${propname} 的语法格式使用在配置文件中，所有的的系统属性包括被设置使用 -D 语法、被JVM自动提供以及在 $CATALINA_BASE/cof/catalina.properties 文件配置的属性，都是可获得的。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-21T12:59:46.595Z">
+<meta property="og:updated_time" content="2018-08-22T06:44:41.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat配置文件——前言">
 <meta name="twitter:description" content="Tomcat的配置文件的格式为无模式的XML格式；元素和属性都是大小写敏感的。支持Apache Ant风格的变量替换；一个带有 propname 的系统属性会被以 ${propname} 的语法格式使用在配置文件中，所有的的系统属性包括被设置使用 -D 语法、被JVM自动提供以及在 $CATALINA_BASE/cof/catalina.properties 文件配置的属性，都是可获得的。">
@@ -230,15 +230,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　Tomcat的配置文件的格式为无模式的XML格式；元素和属性都是大小写敏感的。支持Apache Ant风格的变量替换；一个带有 <strong><em>propname</em></strong> 的系统属性会被以 <strong>${propname}</strong> 的语法格式使用在配置文件中，所有的的系统属性包括被设置使用 <strong>-D</strong> 语法、被JVM自动提供以及在 <strong>$CATALINA_BASE/cof/catalina.properties</strong> 文件配置的属性，都是可获得的。<br>　　配置文件的元素可以分成下面的几个主要类型：  </p>
+        <p>　　Tomcat的配置文件的格式为无模式的XML格式；元素和属性都是大小写敏感的。支持Apache Ant风格的变量替换；一个带有 <strong><em>propname</em></strong> 的系统属性会被以 <strong>${propname}</strong> 的语法格式使用在配置文件中，所有的的系统属性包括被设置使用 <strong>-D</strong> 语法、被JVM自动提供以及在 <strong>$CATALINA_BASE/cof/catalina.properties</strong> 文件配置的属性，都是可获得的。<br><a id="more"></a>配置文件的元素可以分成下面的几个主要类型：   </p>
 <ul>
 <li><strong>顶级元素</strong>——<server>是整个配置文件的根元素，<service>中设置与服务器之间的所有端口连接。</service></server></li>
 <li><strong>Connectors连接口（端口）</strong>——代表外部客户端发送请求（或接收回复）到指定服务的接口。</li>
 <li><strong>Containers容器</strong>——代表处理传入请求并创建相应回复的组件。<strong>Engine</strong>为<strong>Servie</strong>处理所有请求，<strong>Host</strong>为指定的虚拟机处理所有请求，<strong>Context</strong>为指定的web应用程序处理所有的请求服务。</li>
-<li><p><strong>被嵌套组件</strong>——代表可以嵌套在容器中的元素。一些元素可以被嵌套在任意容器中，一些只能被嵌套在Context中。<br>对于每个元素，对应的文档都遵循下面的格式：</p>
-</li>
-<li><p><strong>介绍</strong>——概述这个特殊的组件。将有一个被一个或多个标准实现实现的对应的<strong>Java</strong>接口（在<strong>org.apache.catalina</strong>包中）。</p>
-</li>
+<li><strong>被嵌套组件</strong>——代表可以嵌套在容器中的元素。一些元素可以被嵌套在任意容器中，一些只能被嵌套在Context中。</li>
+</ul>
+<p>对于每个元素，对应的文档都遵循下面的格式：</p>
+<ul>
+<li><strong>介绍</strong>——概述这个特殊的组件。将有一个被一个或多个标准实现实现的对应的<strong>Java</strong>接口（在<strong>org.apache.catalina</strong>包中）。</li>
 <li><strong>属性</strong>——对于这个元素合法的属性集。一般来说，属性集被细分为两类。<strong>Common</strong>属性，可以被所有符合条件的Java接口的实现支持；<strong>Standard Implementation</strong>属性，具体到一个特定的Java类可以实现这个接口。<strong>required</strong>的属性的名字是加粗的。</li>
 <li><strong>被嵌套组件</strong>——枚举可以被合法嵌套进这个元素的被嵌套组件。</li>
 <li><strong>特殊功能</strong>——描述能够被这个接口的标准实现支持的（具体到每个元素类型）大多数特殊功能的配置。</li>

@@ -12,17 +12,17 @@
     
     MaoMorn&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含“cat”的字符串，那么搜索用的正则表达式就是“cat”。如果搜索对大小写不敏感,单词“catalog”、“Catherine”、“sophisticated”都可以匹配。也就是说:    正则表达式： cat     匹配 cat. catalog. Catherine. sophisticated">
+  <meta name="description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含”cat”的字符串，那么搜索用的正则表达式就是”cat”。如果搜索对大小写不敏感,单词”catalog”、 “Catherine”、 “sophisticated”都可以匹配。也就是说:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式的一般书写规则">
 <meta property="og:url" content="http://yoursite.com/2016/03/正则表达式的一般书写规则/index.html">
 <meta property="og:site_name" content="MaoMorn&#39;s Blog">
-<meta property="og:description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含“cat”的字符串，那么搜索用的正则表达式就是“cat”。如果搜索对大小写不敏感,单词“catalog”、“Catherine”、“sophisticated”都可以匹配。也就是说:    正则表达式： cat     匹配 cat. catalog. Catherine. sophisticated">
+<meta property="og:description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含”cat”的字符串，那么搜索用的正则表达式就是”cat”。如果搜索对大小写不敏感,单词”catalog”、 “Catherine”、 “sophisticated”都可以匹配。也就是说:">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-17T13:41:20.943Z">
+<meta property="og:updated_time" content="2018-08-22T06:10:40.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式的一般书写规则">
-<meta name="twitter:description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含“cat”的字符串，那么搜索用的正则表达式就是“cat”。如果搜索对大小写不敏感,单词“catalog”、“Catherine”、“sophisticated”都可以匹配。也就是说:    正则表达式： cat     匹配 cat. catalog. Catherine. sophisticated">
+<meta name="twitter:description" content="1.子字符串当搜索一个包含某子串的字符串时，比如，现在要搜索包含”cat”的字符串，那么搜索用的正则表达式就是”cat”。如果搜索对大小写不敏感,单词”catalog”、 “Catherine”、 “sophisticated”都可以匹配。也就是说:">
   
   <link rel="alternative" href="/atom.xml" title="MaoMorn&#39;s Blog" type="application/atom+xml">
   
@@ -230,23 +230,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-子字符串"><a href="#1-子字符串" class="headerlink" title="1.子字符串"></a>1.子字符串</h3><p>当搜索一个包含某子串的字符串时，比如，现在要搜索包含“cat”的字符串，那么搜索用的正则表达式就是“cat”。如果搜索对大小写不敏感,单词“catalog”、“Catherine”、“sophisticated”都可以匹配。也就是说:</p>
-<table>
+        <h3 id="1-子字符串"><a href="#1-子字符串" class="headerlink" title="1.子字符串"></a>1.子字符串</h3><p>当搜索一个包含某子串的字符串时，比如，现在要搜索包含”cat”的字符串，那么搜索用的正则表达式就是”cat”。如果搜索对大小写不敏感,单词”catalog”、 “Catherine”、 “sophisticated”都可以匹配。也就是说:<br><a id="more"></a>
+<table border="1">
 <thead>
 <tr>
-<th style="text-align:left">正则表达式：</th>
-<th style="text-align:left">cat</th>
+<td><div><strong>正则表达式：</strong></div></td>
+<td><div><strong>cat</strong></div></td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">匹配</td>
-<td style="text-align:left">cat. catalog. Catherine. sophisticated</td>
+<td><div>匹配</div></td>
+<td><div>cat. catalog. Catherine. sophisticated</div></td>
 </tr>
 </tbody>
 </table>
-<p><br><br><a id="more"></a></p>
-<h3 id="2-句点符号"><a href="#2-句点符号" class="headerlink" title="2.句点符号"></a>2.句点符号</h3><p>通配符–句点符号”.”可以代表任意的一个字符，比如正则表达式“t.n”可以匹配“ten”、“t5n”、“t+n”，甚至“t n”，等等各种组合。因为句点符号匹配所有字符，包括空格、Tab字符甚至换行符：</p>
+</p>
+<h3 id="2-句点符号"><a href="#2-句点符号" class="headerlink" title="2.句点符号"></a>2.句点符号</h3><p>通配符–句点符号”.”可以代表任意的一个字符，比如正则表达式”t.n”可以匹配”ten”、”t5n”、”t+n”，甚至”t n”，等等各种组合。因为句点符号匹配所有字符，包括空格、Tab字符甚至换行符：</p>
 <table>
 <thead>
 <tr>
@@ -261,8 +261,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="3-方块符号"><a href="#3-方块符号" class="headerlink" title="3.方块符号"></a>3.方块符号</h3><p>为了解决匹配范围过于广泛的问题，可以“[]”，里面指定看起来有意义的字符。此时，只有方括号里面指定的字符才参与匹配。也就是说，正则表达式“t[aeio]n”只匹配“tan”、“Ten” 、 “tin”、 “ton”。但“Toon”不匹配，因为方括号之内只能匹配单个字符：</p>
+<h3 id="3-方块符号"><a href="#3-方块符号" class="headerlink" title="3.方块符号"></a>3.方块符号</h3><p>为了解决匹配范围过于广泛的问题，可以”[]”，里面指定看起来有意义的字符。此时，只有方括号里面指定的字符才参与匹配。也就是说，正则表达式”t[aeio]n”只匹配”tan”、”Ten” 、 “tin”、 “ton”。但”Toon”不匹配，因为方括号之内只能匹配单个字符：</p>
 <table>
 <thead>
 <tr>
@@ -277,8 +276,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="4-“或”符号"><a href="#4-“或”符号" class="headerlink" title="4.“或”符号"></a>4.“或”符号</h3><p>如果除了上面匹配的所有单词外，还想要匹配“toon”，那么，可以使用“|”操作符。“|”操作符的基本意义就是“或”运算。要匹配“toon”，使用“t(a|e|i|o|oo)n”正则表达式。这里不能使用方括号，因为方括号只允许匹配单个字符，只能使用“()”圆括号。圆括号还可以用来分组，具体参见后面介绍：</p>
+<h3 id="4-”或”符号"><a href="#4-”或”符号" class="headerlink" title="4.”或”符号"></a>4.”或”符号</h3><p>如果除了上面匹配的所有单词外，还想要匹配”toon”，那么，可以使用”|”操作符。”|”操作符的基本意义就是”或”运算。要匹配”toon”，使用”t(a|e|i|o|oo)n”正则表达式。这里不能使用方括号，因为方括号只允许匹配单个字符，只能使用”()”圆括号。圆括号还可以用来分组，具体参见后面介绍：</p>
 <table>
 <thead>
 <tr>
@@ -293,9 +291,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="5-表示匹配次数的符号"><a href="#5-表示匹配次数的符号" class="headerlink" title="5.表示匹配次数的符号"></a>5.表示匹配次数的符号</h3><p>下表显示了匹配次数的符号，这些符号用来确定紧靠该符号左边的符号出现的次数：</p>
-
+<h3 id="5-表示匹配次数的符号"><a href="#5-表示匹配次数的符号" class="headerlink" title="5.表示匹配次数的符号"></a>5.表示匹配次数的符号</h3><p>下表显示了匹配次数的符号，这些符号用来确定紧靠该符号左边的符号出现的次数：
 <table border="1">
 <thead>
 <tr>
@@ -329,8 +325,7 @@
 </tr>
 </tbody>
 </table>
-
-<p>假设要在文本文件中搜索美国的社会安全号码。这个号码的格式是999-99-9999。用来匹配它的正则表达式如下所示。在正则表达式中，连字符“-“有着特殊的意义，它表示一个范围，比如0到9。因此，匹配社会安全号码中的连字符时，它的前面要加上转义字符“\”(具体是否加转义字符，需根据使用的编程语言而定)。</p>
+假设要在文本文件中搜索美国的社会安全号码。这个号码的格式是999-99-9999。用来匹配它的正则表达式如下所示。在正则表达式中，连字符”-“有着特殊的意义，它表示一个范围，比如0到9。因此，匹配社会安全号码中的连字符时，它的前面要加上转义字符”\”(具体是否加转义字符，需根据使用的编程语言而定)。</p>
 <table>
 <thead>
 <tr>
@@ -351,7 +346,7 @@
 </tr>
 </tbody>
 </table>
-<p>假设进行搜索的时候，希望连字符号可以出现，也可以不出现–即，999-99-9999和999999999都属于正确的格式。这时，可以在连字符后面加上“?”数量限定符号，如下所示：</p>
+<p>假设进行搜索的时候，希望连字符号可以出现，也可以不出现–即，999-99-9999和999999999都属于正确的格式。这时，可以在连字符后面加上”?”数量限定符号，如下所示：</p>
 <table>
 <thead>
 <tr>
@@ -387,8 +382,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="6-“否”符号"><a href="#6-“否”符号" class="headerlink" title="6.“否”符号"></a>6.“否”符号</h3><p>“^”符号称为“否”符号。如果在方括号内，“^”表示不想要匹配的字符。例如，下图的正则表达式匹配所有单词，但是以“X”字母开头的单词除外。</p>
+<h3 id="6-”否”符号"><a href="#6-”否”符号" class="headerlink" title="6.”否”符号"></a>6.”否”符号</h3><p>“^”符号称为”否”符号。如果在方括号内，”^”表示不想要匹配的字符。例如，下图的正则表达式匹配所有单词，但是以”X”字母开头的单词除外。</p>
 <table>
 <thead>
 <tr>
@@ -403,9 +397,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="7-圆括号和空白符号"><a href="#7-圆括号和空白符号" class="headerlink" title="7.圆括号和空白符号"></a>7.圆括号和空白符号</h3><p>假设要从格式为”June 26,1951″的生日日期中提取出月份部分，用来匹配该日期的正则表达式可以如下图所示：</p>
-
+<h3 id="7-圆括号和空白符号"><a href="#7-圆括号和空白符号" class="headerlink" title="7.圆括号和空白符号"></a>7.圆括号和空白符号</h3><p>假设要从格式为”June 26,1951″的生日日期中提取出月份部分，用来匹配该日期的正则表达式可以如下图所示：
 <table border="1">
 <thead>
 <tr>
@@ -431,9 +423,7 @@
 </tr>
 </tbody>
 </table>
-
-<p>新出现的”\s”符号是空白符号，匹配所有的空白字符，包括Tab字符。如果字符串正确匹配，接下来如何提出月份部分呢？只需要在月份周围加上一个圆括号创建一个组，然后ORO API(本文后面详细讨论)提取出它的值。修改后的正则表达是如下图所示：</p>
-
+新出现的”\s”符号是空白符号，匹配所有的空白字符，包括Tab字符。如果字符串正确匹配，接下来如何提出月份部分呢？只需要在月份周围加上一个圆括号创建一个组，然后ORO API(本文后面详细讨论)提取出它的值。修改后的正则表达是如下图所示：
 <table border="1">
 <thead>
 <tr>
@@ -459,10 +449,8 @@
 </tr>
 </tbody>
 </table>
-
-<p><br></p>
-<h3 id="8-其他符号"><a href="#8-其他符号" class="headerlink" title="8.其他符号"></a>8.其他符号</h3><p>为简便起见，可以使用一些比较常见的正则表达式创建的快捷符号。如下图所示：</p>
-
+</p>
+<h3 id="8-其他符号"><a href="#8-其他符号" class="headerlink" title="8.其他符号"></a>8.其他符号</h3><p>为简便起见，可以使用一些比较常见的正则表达式创建的快捷符号。如下图所示：
 <table border="1">
 <thead>
 <tr>
@@ -500,8 +488,7 @@
 </tr>
 </tbody>
 </table>
-
-<p>例如，在前面社会安全号码的例子中，所有出现”[0-9]”的地方都可以用”\d”。修改后的正则表达式如下图所示：</p>
+例如，在前面社会安全号码的例子中，所有出现”[0-9]”的地方都可以用”\d”。修改后的正则表达式如下图所示：</p>
 <table>
 <thead>
 <tr>
@@ -522,9 +509,7 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
-<h3 id="9-更详细的规则"><a href="#9-更详细的规则" class="headerlink" title="9.更详细的规则"></a>9.更详细的规则</h3><p>正则表达式是一种文本模式，包括普通字符(例如，a到z之间的字母)和特殊字符(称为”元字符”)。模式描述在搜索文本时要匹配一个或多个字符串。</p>
-
+<h3 id="9-更详细的规则"><a href="#9-更详细的规则" class="headerlink" title="9.更详细的规则"></a>9.更详细的规则</h3><p>正则表达式是一种文本模式，包括普通字符(例如，a到z之间的字母)和特殊字符(称为”元字符”)。模式描述在搜索文本时要匹配一个或多个字符串。
 <table border="1">
 <thead>
 <tr>
@@ -554,46 +539,7 @@
 </tr>
 </tbody>
 </table>
-
-<p>字符以及说明</p>
-<p><strong>\</strong><br><br>将下一字符标记为特殊字符、文本、反向引用或八进制转义符。例如，“n”匹配字符“n”。“\n”匹配换行符。序列“\\”匹配“\”，“\(”匹配“(”。</p>
-<p><strong>^</strong><br><br>匹配输入字符串开始的位置。如果设置了RegExp对象的Multiline属性，^还会与“\n”或“\r”之后的位置匹配。</p>
-<p><strong>$</strong><br><br>匹配输入字符串结尾的位置。如果设置了RegExp对象的Multiline属性，$还会与”\n”或”\r”之前的位置匹配。</p>
-<p><strong>*</strong><br><br>零次或多次匹配前面的字符或子表达式。例如，zo<em>匹配“z”和“zoo”。</em>等效于{0,}。</p>
-<p><strong>+</strong><br><br>一次或多次匹配前面的字符或子表达式。例如，“zo+”与“zo”和“zoo”匹配，但与“z”不匹配。+等效于{1,}。</p>
-<p><strong>?</strong><br><br>；零次或一次匹配前面的字符或子表达式。例如，“do(es)?”匹配“do”或“does”。?等效于{0,1}。</p>
-<p><strong>{n}</strong><br><br>n是非负整数。正好匹配n次。例如，“o{2}”与“Bob”中的“o”不匹配，但与“food”中的两个“o”匹配。</p>
-<p><strong>{n,}</strong><br><br>n是非负整数。正好匹配n次。例如，“o{2,}”不匹配“Bob”中的“o”，而匹配“fooooood”中的所有o。“o{1,}”等效于“o+”。“o{0,}”等效于“o*”。</p>
-<p><strong>{n,m}</strong><br><br>M和n是非负整数，其中n&lt;=m。匹配至少n次，至多m次。例如，”o{1,3}”匹配“fooooooood”中的头三个o。“o{0,1}”等效于“o?”。注意：不能将空格插入逗号和数字之间。匹配除“\n”之外的任何单个字符。若要匹配包括“\n”在内的任意字符，应使用诸如“[\s\S]”之类的模式。</p>
-<p><strong>(pattern)</strong><br><br>匹配pattern并捕获该匹配的子表达式。可以使用$0…$9属性从结果”匹配”集合检索捕获的匹配。若要匹配括号字符()，应使用“\(”或者“\)”。</p>
-<p><strong>(?:pattern)</strong><br><br>匹配pattern但不捕获该匹配的子表达式，即它是一个非捕获匹配，不存储供以后使用的匹配。这对于用“or”字符(|)组合模式部件的情况很有用。例如，“industr(?:y|ies)”是比“industry|industries”更经济的表达式。</p>
-<p><strong>(?=pattern)</strong><br><br>执行正向预测先行搜索的子表达式，该表达式匹配处于匹配pattern的子字符串的起始点的字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如“Windows(?=95|98|NT|2000)”匹配“Windows 2000”中的“Windows”，但不匹配“Windows 3.1”中的“Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。</p>
-<p><strong>(?!pattern)</strong><br><br>执行反向预测先行搜索的子表达式，该表达式匹配不处于匹配pattern的字符串的起始点的搜索字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如，“Windows(?!95|98|NT|2000)”匹配“Windows 3.1″中的“Windows”，但不匹配“Windows 2000″中的“Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。</p>
-<p><strong>x|y</strong><br><br>匹配x或y。例如“z|food”匹配“z”或“food”。“(z|f)ood”匹配“zood”或“food”。</p>
-<p><strong>[xyz]</strong><br><br>字符集。匹配包含的任一字符。例如，“[abc]”匹配“plain”中的“a”。</p>
-<p><strong>[^xyz]</strong><br><br>反向字符集。匹配未包含的任何字符。例如，“[^abc]”不匹配“plain”中的“a”。</p>
-<p><strong>[a-z]</strong><br><br>字符范围。匹配制定范围内的任何字符。例如，“[a-z]”匹配“a”到“z”范围内的任何小写字母。</p>
-<p><strong>[^a-z]</strong><br><br>反向范围字符。匹配不在指定范围内的任何字符。例如，“[^a-z]”匹配任何不在“a”到“z”范围内的任何字符。</p>
-<p><strong>\b</strong><br><br>匹配一个字边界，即字与空格间的位置。例如，“er\b”匹配“never”中的“er”，但不匹配“verb”中的“er”。</p>
-<p><strong>\B</strong><br><br>非字边界匹配。“er\B”匹配“verb”中的“er”，但不匹配“never”中的“er”。</p>
-<p><strong>\cx</strong><br><br>匹配x指示的控制字符。例如，\cM匹配Control-M或回车符。x的值必须在A-Z或a-z之间。如果不是这样，则假定c就是“c”字符本身。</p>
-<p><strong>\d</strong><br><br>数字字符匹配。等效于[0-9]。</p>
-<p><strong>\D</strong><br><br>非数字字符匹配。等效于[^0-9]。</p>
-<p><strong>\f</strong><br><br>换页符匹配。等效于\x0c和\cL。</p>
-<p><strong>\n</strong><br><br>换行符匹配。等效于\x0a和\cJ。</p>
-<p><strong>\r</strong><br><br>匹配一个回车符。等效于\x0d和\cM。</p>
-<p><strong>\s</strong><br><br>匹配任何空白字符，包括空格、制表符、换页符等。与[\f\n\r\t\v]等效。</p>
-<p><strong>\S</strong><br><br>匹配任何非空白字符，包括空格、制表符、换页符等。与[^\f\n\r\t\v]等效。</p>
-<p><strong>\t</strong><br><br>制表符匹配。与\x09和\xI等效。</p>
-<p><strong>\v</strong><br><br>垂直制表符匹配。与\x0b和\cK等效。</p>
-<p><strong>\w</strong><br><br>匹配任何字类字符，包括下划线。与“[A-Za-z0-9]”等效。</p>
-<p><strong>\W</strong><br><br>匹配任何非字类字符，包括下划线。与“[^A-Za-z0-9]”等效。</p>
-<p><strong>\xn</strong><br><br>匹配n，此处的n是一个十六进制转义码。十六进制转义码必须正好是两位数长。例如，“\x41”匹配“A”。“\x041”与“\x04”&amp;“1”等效。允许在正则表达式中使用ASCII代码。</p>
-<p><strong>\num</strong><br><br>匹配num，此处num是一个正整数。到捕获匹配的的反向引用。例如，“(.)\1”匹配两个连续的相同字符。</p>
-<p><strong>\n</strong><br><br>标识一个八进制转义码或反向引用。如果\n前面至少有n个捕获子表达式，那么n是反向引用。否则，如果n是八进制数(0-7)，那么n是八进制转义码。</p>
-<p><strong>\nm</strong><br><br>标识一个八进制转义码或反向引用。如果\nm前面至少有nm个捕获子表达式，那么nm是反向引用。如果\nm前面至少有n个捕获，则n是反向引用，后面跟有字符m。如果两种前面的情况都不存在，则\nm匹配八进制nm，其中n和m是八进制数字(0-7)。</p>
-<p><strong>\nml</strong><br><br>当n是八进制数(0-3)，m和l是八进制数(0-7)时，匹配八进制转义码nml。</p>
-<p><strong>\un</strong><br><br>匹配n，其中n是以四位十六进制数表示的Unicode字符。例如，\u00A9匹配版权符号(?)。</p>
+<strong>字符以及说明</strong><br><strong>\</strong><br>将下一字符标记为特殊字符、文本、反向引用或八进制转义符。例如，”n”匹配字符”n”。”\n”匹配换行符。序列”\\“匹配”\”，”\(“匹配”(“。<br><strong>^</strong><br>匹配输入字符串开始的位置。如果设置了RegExp对象的Multiline属性，^还会与”\n”或”\r”之后的位置匹配。<br><strong>$</strong><br>匹配输入字符串结尾的位置。如果设置了RegExp对象的Multiline属性，$还会与”\n”或”\r”之前的位置匹配。<br><strong>*</strong><br>零次或多次匹配前面的字符或子表达式。例如，zo<em>匹配”z”和”zoo”。</em>等效于{0,}。<br><strong>+</strong><br>一次或多次匹配前面的字符或子表达式。例如，”zo+”与”zo”和”zoo”匹配，但与”z”不匹配。+等效于{1,}。<br><strong>?</strong><br>；零次或一次匹配前面的字符或子表达式。例如，”do(es)?”匹配”do”或”does”。?等效于{0,1}。<br><strong>{n}</strong><br>n是非负整数。正好匹配n次。例如，”o{2}”与”Bob”中的”o”不匹配，但与”food”中的两个”o”匹配。<br><strong>{n,}</strong><br>n是非负整数。正好匹配n次。例如，”o{2,}”不匹配”Bob”中的”o”，而匹配”fooooood”中的所有o。”o{1,}”等效于”o+”。”o{0,}”等效于”o*”。<br><strong>{n,m}</strong><br>M和n是非负整数，其中n&lt;=m。匹配至少n次，至多m次。例如，”o{1,3}”匹配”fooooooood”中的头三个o。”o{0,1}”等效于”o?”。注意：不能将空格插入逗号和数字之间。匹配除”\n”之外的任何单个字符。若要匹配包括”\n”在内的任意字符，应使用诸如”[\s\S]”之类的模式。<br><strong>(pattern)</strong><br>匹配pattern并捕获该匹配的子表达式。可以使用$0…$9属性从结果”匹配”集合检索捕获的匹配。若要匹配括号字符()，应使用”\(“或者”\)”。<br><strong>(?:pattern)</strong><br>匹配pattern但不捕获该匹配的子表达式，即它是一个非捕获匹配，不存储供以后使用的匹配。这对于用”or”字符(|)组合模式部件的情况很有用。例如，”industr(?:y|ies)”是比”industry|industries”更经济的表达式。<br><strong>(?=pattern)</strong><br>执行正向预测先行搜索的子表达式，该表达式匹配处于匹配pattern的子字符串的起始点的字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如”Windows(?=95|98|NT|2000)”匹配”Windows 2000”中的”Windows”，但不匹配”Windows 3.1”中的”Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。<br><strong>(?!pattern)</strong><br>执行反向预测先行搜索的子表达式，该表达式匹配不处于匹配pattern的字符串的起始点的搜索字符串。它是一个非捕获匹配，即不能捕获供以后使用的匹配。例如，”Windows(?!95|98|NT|2000)”匹配”Windows 3.1″中的”Windows”，但不匹配”Windows 2000″中的”Windows”。预测先行不占用字符，即发生匹配后，下一匹配的搜索紧随上一匹配之后，而不是在组成预测先行的字符后。<br><strong>x|y</strong><br>匹配x或y。例如”z|food”匹配”z”或”food”。”(z|f)ood”匹配”zood”或”food”。<br><strong>[xyz]</strong><br>字符集。匹配包含的任一字符。例如，”[abc]”匹配”plain”中的”a”。<br><strong>[^xyz]</strong><br>反向字符集。匹配未包含的任何字符。例如，”[^abc]”不匹配”plain”中的”a”。<br><strong>[a-z]</strong><br>字符范围。匹配制定范围内的任何字符。例如，”[a-z]”匹配”a”到”z”范围内的任何小写字母。<br><strong>[^a-z]</strong><br>反向范围字符。匹配不在指定范围内的任何字符。例如，”[^a-z]”匹配任何不在”a”到”z”范围内的任何字符。<br><strong>\b</strong><br>匹配一个字边界，即字与空格间的位置。例如，”er\b”匹配”never”中的”er”，但不匹配”verb”中的”er”。<br><strong>\B</strong><br>非字边界匹配。”er\B”匹配”verb”中的”er”，但不匹配”never”中的”er”。<br><strong>\cx</strong><br>匹配x指示的控制字符。例如，\cM匹配Control-M或回车符。x的值必须在A-Z或a-z之间。如果不是这样，则假定c就是”c”字符本身。<br><strong>\d</strong><br>数字字符匹配。等效于[0-9]。<br><strong>\D</strong><br>非数字字符匹配。等效于[^0-9]。<br><strong>\f</strong><br>换页符匹配。等效于\x0c和\cL。<br><strong>\n</strong><br>换行符匹配。等效于\x0a和\cJ。<br><strong>\r</strong><br>匹配一个回车符。等效于\x0d和\cM。<br><strong>\s</strong><br>匹配任何空白字符，包括空格、制表符、换页符等。与[\f\n\r\t\v]等效。<br><strong>\S</strong><br>匹配任何非空白字符，包括空格、制表符、换页符等。与[^\f\n\r\t\v]等效。<br><strong>\t</strong><br>制表符匹配。与\x09和\xI等效。<br><strong>\v</strong><br>垂直制表符匹配。与\x0b和\cK等效。<br><strong>\w</strong><br>匹配任何字类字符，包括下划线。与”[A-Za-z0-9]”等效。<br><strong>\W</strong><br>匹配任何非字类字符，包括下划线。与”[^A-Za-z0-9]”等效。<br><strong>\xn</strong><br>匹配n，此处的n是一个十六进制转义码。十六进制转义码必须正好是两位数长。例如，”\x41”匹配”A”。”\x041”与”\x04”&amp;”1”等效。允许在正则表达式中使用ASCII代码。<br><strong>\num</strong><br>匹配num，此处num是一个正整数。到捕获匹配的的反向引用。例如，”(.)\1”匹配两个连续的相同字符。<br><strong>\n</strong><br>标识一个八进制转义码或反向引用。如果\n前面至少有n个捕获子表达式，那么n是反向引用。否则，如果n是八进制数(0-7)，那么n是八进制转义码。<br><strong>\nm</strong><br>标识一个八进制转义码或反向引用。如果\nm前面至少有nm个捕获子表达式，那么nm是反向引用。如果\nm前面至少有n个捕获，则n是反向引用，后面跟有字符m。如果两种前面的情况都不存在，则\nm匹配八进制nm，其中n和m是八进制数字(0-7)。<br><strong>\nml</strong><br>当n是八进制数(0-3)，m和l是八进制数(0-7)时，匹配八进制转义码nml。<br><strong>\un</strong><br>匹配n，其中n是以四位十六进制数表示的Unicode字符。例如，\u00A9匹配版权符号(?)。</p>
 
       
 

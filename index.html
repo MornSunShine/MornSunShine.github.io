@@ -206,19 +206,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-AndroidStudio打包APK获取MD5等" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-AndroidStudio打包APK签名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/AndroidStudio打包APK获取MD5等/">AndroidStudio打包APK获取MD5等</a>
+      <a class="article-title" href="/2018/08/AndroidStudio打包APK签名/">AndroidStudio打包APK签名</a>
     </h1>
   
 
         
-        <a href="/2018/08/AndroidStudio打包APK获取MD5等/" class="archive-article-date">
+        <a href="/2018/08/AndroidStudio打包APK签名/" class="archive-article-date">
   	<time datetime="2018-08-23T10:36:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-23</time>
 </a>
         
@@ -228,7 +228,7 @@
       
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>　　签名对与APK来说，类似于身份证一样的存在，通过这个签名，可以对软件进行唯一性的辨识。在Windows电脑上安装软件的时候，系统是以一种类似解压的方式进行安装，然后在注册表中注册；然而APK只是生成一个目录，再将APK复制一份存在底层指定的目录下，没有解压。通过对两者软体安装的区别，可以更方便理解签名对于APK的作用。APK试运行的平台，无非虚拟机和测试机，当然，虚拟机的速度实在太慢，我个人还是喜欢用一台闲置的安卓机当作测试机进行Android开发。<br>　　Android软件分为发布版和开发版，在开发阶段，每次的编译，ADT会使用默认的密钥和证书进行签名，如果实际发布，那就需要手动签名，自定密钥了。APK签名有以下用处：<strong>1.程序升级：</strong> 升级应用程序，签名证书要相同，包名称要相同！如果希望用户无缝升级到新的版本，就必须用同一个证书进行签名，只有以同一个证书签名，系统才会允许安装升级的应用程序，如果采用了不同的证书，那么系统会要求APK采用不同的包名称，在这种情况下相当于安装了一个全新的应用程序；<strong>2.程序模块化：</strong> Android系统可以允许同一个证书签名的多个应用程序在一个进程里运行，系统实际把他们作为单个的应用程序，此时就可以把我们的应用程序以模块的方式进行部署，而用户可以独立的升级其中的一个模块；<strong>3.代码或者数据共享：</strong> Android 提供了基于签名的权限机制，通过同一个证书对多个应用程序进行签名，利用基于签名的权限检查，可以在应用程序间以安全的方式共享代码和数据。<br>
         
-          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK获取MD5等/#more">more >></a>
+          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK签名/#more">more >></a>
         
       
 
@@ -241,7 +241,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK获取MD5等/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/08/AndroidStudio打包APK签名/">展开全文 >></a>
         </p>
       
 
